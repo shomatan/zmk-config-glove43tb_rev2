@@ -2,23 +2,30 @@
 #include <behaviors/rgbled_widget.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 150
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
 
+&msc {
+    delay-ms = <3>;
+    trigger-period-ms = <3>;
+    time-to-max-speed-ms = <100>;
+    acceleration-exponent = <0>;
+};
+
 / {
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+        mouse_wheel_scroll: mouse_wheel_scroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
             tap-ms = <20>;
         };
 
@@ -52,7 +59,7 @@
 &kp LEFT_SHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 1 ESCAPE  &lt 2 TAB  &kp LEFT_COMMAND      &lt 1 SPACE    &kp RIGHT_COMMAND                               &none
             >;
 
-            sensor-bindings = <&scroll_left_right>;
+            sensor-bindings = <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
         };
 
         NUM {
