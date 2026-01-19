@@ -59,7 +59,7 @@
 &kp LEFT_SHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 1 ESCAPE  &lt 2 TAB  &kp LEFT_COMMAND      &lt 1 SPACE    &kp RIGHT_COMMAND                               &none
             >;
 
-            sensor-bindings = <&mouse_wheel_scroll SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
         };
 
         NUM {
