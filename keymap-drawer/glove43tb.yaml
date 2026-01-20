@@ -41,7 +41,7 @@ layers:
   - {t: ESCAPE, h: NUM}
   - {t: TAB, h: SYMBOL}
   - LEFT COMMAND
-  - {t: SPACE, h: '&mo1_eisuu'}
+  - '&lt_spc_eisuu 0 SPACE'
   - RIGHT COMMAND
   - ''
   NUM:
