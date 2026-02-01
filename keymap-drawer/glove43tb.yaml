@@ -43,7 +43,7 @@ layers:
   - LEFT COMMAND
   - {t: SPACE, h: '&mo1_eisuu'}
   - RIGHT COMMAND
-  - ''
+  - RIGHT ALT
   NUM:
   - /
   - '7'
