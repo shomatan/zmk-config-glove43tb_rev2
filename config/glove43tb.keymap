@@ -31,15 +31,6 @@
             tap-ms = <20>;
         };
 
-        hold_layer_1: hold_layer_1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_LAYER_1";
-            bindings = <&lt>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-        };
-
         // タップ: SPACE / ホールド: 英数+レイヤー1
 
         lt_spc_eisuu: lt_spc_eisuu {
