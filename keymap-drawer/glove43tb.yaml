@@ -40,9 +40,9 @@ layers:
   - LEFT ALT
   - {t: ESCAPE, h: NUM}
   - {t: TAB, h: SYMBOL}
-  - LEFT COMMAND
+  - {t: LANG2, h: LEFT COMMAND}
   - {t: SPACE, h: NUM}
-  - RIGHT COMMAND
+  - {t: LANG1, h: RIGHT COMMAND}
   - RIGHT ALT
   NUM:
   - /
